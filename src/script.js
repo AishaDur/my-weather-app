@@ -1,5 +1,4 @@
 import axios from "axios";
-
 function formatDate() {
   let now = new Date();
   let days = [
