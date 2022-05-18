@@ -1,3 +1,4 @@
+import axios from "axios";
 
 function formatDate() {
   let now = new Date();
@@ -21,7 +22,7 @@ function formatDate() {
 }
 let showTime = document.querySelector(".show-time");
 showTime.innerHTML = formatDate(new Date());
-import axios from "axios";
+
 function enterLocation(event) {
   event.preventDefault();
   let locationInput = document.querySelector("#search-input");
