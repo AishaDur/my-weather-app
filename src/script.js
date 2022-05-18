@@ -30,7 +30,7 @@ function enterLocation(event) {
   currentLocation.innerHTML = `${locationInput.value}`;
 
   let apiKey = "5dae726f6a3325128a4f162c5b01cfa9";
-  let apiEndpoint = "http://api.openweathermap.org/data/2.5/weather";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?q=${locationInput.value}&appid=${apiKey}`;
 
   axios.get(apiUrl).then(showTemperature);
