@@ -8,3 +8,6 @@ body {
     background: #a2a8d3;
     color: #113f67;
   }
+  .card h-100 {
+    text-align: center;
+  }
