@@ -44,8 +44,8 @@ function showTemperature(response) {
   let heading = document.querySelector("#location-temp");
   heading.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement = response.data.main.humidity;
-  console.log(response.data.main.humidity);
+  humidityElement.innerHTML = response.data.main.humidity;
+  
 }
 
 let searchForm = document.querySelector("#form-input");
