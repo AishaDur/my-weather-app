@@ -38,10 +38,11 @@ function enterLocation(event) {
 }
 
 function showTemperature(response) {
-  console.log(response.data.main.temp);
+  let descriptionElement = document.querySelector("#description")
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("#location-temp");
   heading.innerHTML = `${temperature}`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 let searchForm = document.querySelector("#form-input");
