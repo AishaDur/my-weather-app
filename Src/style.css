@@ -13,7 +13,5 @@ body {
     display: block;
     margin: 0 auto;
     text-align: center;
-    position: relative;
-    top: 15px; left: 300px; right: 300px; bottom: 40px;
   }
  
