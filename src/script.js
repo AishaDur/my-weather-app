@@ -49,3 +49,4 @@ function showTemperature(response) {
 
 let searchForm = document.querySelector("#form-input");
 searchForm.addEventListener("submit", enterLocation);
+console.log(response.data.main.humidity);
