@@ -11,12 +11,7 @@ body {
   }
   #entire-card {
     display: block;
+    margin: 0 auto;
     text-align: center;
   }
-  
-  .temps {
-    text-align: center;
-  }
-  .chance-of-rain {
-    text-align: center;
-  }
+ 
