@@ -26,7 +26,7 @@ function enterLocation(event) {
   event.preventDefault();
   let locationInput = document.querySelector("#search-input");
   let currentLocation = document.querySelector("#location-name");
-  locationInput = locationInput.toUpperCase;
+  locationInput.value = locationInput.value.toUpperCase;
 
   currentLocation.innerHTML = `${locationInput.value}`;
 
