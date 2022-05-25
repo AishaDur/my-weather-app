@@ -3,7 +3,7 @@ body {
   }
   .card-text {
     color: #38598b;
-    text-align: center;
+    
   }
   .card-body {
     background: #a2a8d3;
@@ -11,5 +11,8 @@ body {
   }
   .card h-100 {
     display: block;
+    text-align: center;
+  }
+  .temps {
     text-align: center;
   }
