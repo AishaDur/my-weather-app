@@ -17,5 +17,10 @@ body {
   }
   #location-name {
     font-size:42px
+
+  }
+
+  #location-name:first-letter {
+    text-transform: capitalize;
   }
  
