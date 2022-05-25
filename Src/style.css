@@ -9,10 +9,14 @@ body {
     background: #a2a8d3;
     color: #113f67;
   }
-  .card h-100 {
+  #entire-card {
     display: block;
     text-align: center;
   }
+  
   .temps {
+    text-align: center;
+  }
+  .chance-of-rain {
     text-align: center;
   }
