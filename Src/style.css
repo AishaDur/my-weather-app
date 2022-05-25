@@ -13,5 +13,7 @@ body {
     display: block;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    top: 20px; left: 20px; right: 20px; bottom: 20px;
   }
  
