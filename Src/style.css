@@ -3,11 +3,13 @@ body {
   }
   .card-text {
     color: #38598b;
+    text-align: center;
   }
   .card-body {
     background: #a2a8d3;
     color: #113f67;
   }
   .card h-100 {
+    display: block;
     text-align: center;
   }
