@@ -40,12 +40,13 @@ function enterLocation(event) {
 function showTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#location-humidity");
+  let windElement = document.querySelector("#wind-speed");
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("#location-temp");
   heading.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 let searchForm = document.querySelector("#form-input");
