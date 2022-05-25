@@ -19,13 +19,7 @@
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand">
-            Current Location: <span id="location-name">
-          </span>
-        </br>
-        Current Temperature: <span id="location-temp"></span>
-        </br>
-        Current Time:
-        
+            Title
           </a>
           <form class="d-flex" id="form-input">
             <input
@@ -46,17 +40,18 @@
         <div class="col">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title"><span class="show-time">
+              <h5 class="card-title"><span id="location-name">
               </span></h5>
               <p class="card-text">
 								<div class="temps">
-									Temperature: 🌡 84℃ </div>
+									Temperature: 🌡 <span id="location-temp"></span>℃ </div>
 								<div class="chance-of-rain">
 										Precipitation: 💧 3% </div>
               </p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted"><span class="show-time">
+              </span></small>
             </div>
           </div>
         </div>
