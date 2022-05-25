@@ -15,4 +15,7 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+  #location-name {
+    font-size:42px
+  }
  
