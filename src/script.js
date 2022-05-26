@@ -56,9 +56,12 @@ celsiusTemperature =  response.data.main.temp;
 }
 function showFahrenheitTemperature(event) {
   event.preventDefault();
+
+  let temperatureElement = document.querySelector("#location-temp");
+
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#location-temp");
+
   let fahrenheitTemperature = `(${celsiusTemperature}*9) / 5 + 32`;
   
   temperatureElement.innerHTML =  Math.round(fahrenheitTemperature);
@@ -66,9 +69,12 @@ function showFahrenheitTemperature(event) {
 
 function showCelsiusTemperature(event) {
   event.PreventDefault();
+
+  let temperatureElement = document.querySelector("#location-temp");
+
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#location-temp");
+  
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
