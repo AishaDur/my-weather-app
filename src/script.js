@@ -68,7 +68,7 @@ function showFahrenheitTemperature(event) {
 }
 
 function showCelsiusTemperature(event) {
-  event.PreventDefault();
+  event.preventDefault();
 
   let temperatureElement = document.querySelector("#location-temp");
 
