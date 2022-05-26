@@ -23,3 +23,10 @@ body {
  #description {
    text-transform: capitalize;
  }
+ .temps .active {
+   color: black;
+   cursor: default;
+ }
+ .temps .active:hover {
+   text-decoration: none;
+ }
