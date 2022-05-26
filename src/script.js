@@ -41,12 +41,14 @@ function showTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#location-humidity");
   let windElement = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("icon");
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("#location-temp");
   heading.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 let searchForm = document.querySelector("#form-input");
