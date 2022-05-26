@@ -31,3 +31,6 @@ body {
  .units .active:hover {
    text-decoration: underline;
  }
+ li {
+   list-style: none;
+ }
