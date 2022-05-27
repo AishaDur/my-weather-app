@@ -34,3 +34,13 @@ body {
  li {
    list-style: none;
  }
+ .weather-forcast-date {
+   font-size: 16px;
+   opacitty: 0.5;
+ }
+ .weather-forcast-temp {
+   font-size: 13px;
+ }
+ .day-one-temp-min {
+   opacity: 0.5;
+ }
