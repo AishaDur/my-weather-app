@@ -37,6 +37,35 @@ function enterLocation(event) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function displayForecast( ) {
+  let forecastElement = document.querySelector(#forecast);
+
+  let forecastHTML =  `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+  days.forEach(function(day){
+    forecastHTML = forecastHTML +
+    `<div clas="col-2">
+      <div class="weather-forecast-date"> 
+        ${day}
+      </div>
+      <img
+      src="https://openweathermap.org/img/wn/50d@2x.png"
+      id="day-one-icon"
+      width="42"
+      /> 
+      <div class="weather-forecast-temp">
+        Temperature: 🌡 <span id="temp-max">18°</span> | <span id="temp-min">12°</span>
+      </div>
+  </div>`;}) ;
+  
+
+forecastHTML = forecastHTML + `</div>`;
+
+forecastElement.innerHTML = forecastHTML;
+
+
+}
+
 function showTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#location-humidity");
@@ -44,6 +73,8 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#location-temp");
+
+  
 
 celsiusTemperature =  response.data.main.temp;
 
@@ -88,3 +119,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+displayForecast();
