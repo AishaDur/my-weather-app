@@ -38,7 +38,7 @@ function enterLocation(event) {
 }
 
 function displayForecast( ) {
-  let forecastElement = document.querySelector(#forecast);
+  let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML =  `<div class="row">`;
   let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
