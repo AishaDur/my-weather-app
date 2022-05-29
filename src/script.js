@@ -59,6 +59,7 @@ function displayForecast(response) {
       </div>
       <img
       src="http://openweathermap.org/img/wn/50d@2x.png"
+      alt=""
       id="day-one-icon"
       width="42"
       /> 
