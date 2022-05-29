@@ -32,7 +32,7 @@ function enterLocation(event) {
 
   let apiKey = "5dae726f6a3325128a4f162c5b01cfa9";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${apiEndpoint}?q=${locationInput.value}&appid=${apiKey}&units=metric`;
+  let apiUrl = `${apiEndpoint}?q=${locationInput.value}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(showTemperature);
 }
@@ -82,7 +82,7 @@ forecastElement.innerHTML = forecastHTML;
 function getForecast(coordinates) {
   console.log(coordinates);
 let apiKey = "5dae726f6a3325128a4f162c5b01cfa9";
-let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=imperial`;
 axios.get(apiUrl).then(displayForecast);
 }
 
@@ -96,8 +96,6 @@ function showTemperature(response) {
 
   
 
-celsiusTemperature =  response.data.main.temp;
-
   temperatureElement.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -107,36 +105,10 @@ celsiusTemperature =  response.data.main.temp;
 
   getForecast(response.data.coord);
 }
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector("#location-temp");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector("#location-temp");
-
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#form-input");
 searchForm.addEventListener("submit", enterLocation);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
+
+
