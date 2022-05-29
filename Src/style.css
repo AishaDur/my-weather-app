@@ -36,7 +36,7 @@ body {
  }
  .weather-forcast-date {
    font-size: 16px;
-   opacitty: 0.5;
+   opacity: 0.5;
  }
  .weather-forcast-temp {
    font-size: 13px;
