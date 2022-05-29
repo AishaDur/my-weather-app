@@ -46,6 +46,8 @@ return days[day];
 
 function displayForecast(response) {
   let forecast = response.data.daily;
+  console.log(response);
+;  console.log(forecast);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML =  `<div class="row">`;
@@ -74,7 +76,7 @@ function displayForecast(response) {
 forecastHTML = forecastHTML + `</div>`;
 
 forecastElement.innerHTML = forecastHTML;
-console.log(forecastDay.temp);
+
 }
 
 function getForecast(coordinates) {
