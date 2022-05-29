@@ -58,7 +58,7 @@ function displayForecast(response) {
         ${formatDay(forecastDay.dt)}
       </div>
       <img
-      src="https://openweathermap.org/img/wn/50d@2x.png"
+      src="http://openweathermap.org/img/wn/50d@2x.png"
       id="day-one-icon"
       width="42"
       /> 
