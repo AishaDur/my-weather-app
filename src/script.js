@@ -54,7 +54,7 @@ function displayForecast(response) {
     if (index < 6) {
     forecastHTML = forecastHTML +
     `<div clas="col-2">
-      <div class="weather-forecast-date">  $
+      <div class="weather-forecast-date">
         ${formatDay(forecastDay.dt)}
       </div>
       <img
